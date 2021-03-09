@@ -4,9 +4,9 @@ const Template = ({ children }) => {
   return (
     <>
       <div className="start-animation">
-        <Header></Header>
         <div className="start-image"></div>
       </div>
+      <Header></Header>
       <div className="container">{children}</div>
     </>
   )
