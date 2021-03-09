@@ -1,0 +1,73 @@
+.start-animation {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(0, 0);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background: $primary;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    animation: hideLeft 1s 0.2s both;
+  }
+  &::after {
+    content: "";
+    background: $primary;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    top: 0;
+    animation: hideRight 1s 0.2s both;
+  }
+  .start-image {
+    background: url("../images/logo.svg") center no-repeat;
+    animation: changeLogo 1s 0.5s both;
+    background-size: contain;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+@keyframes hideLeft {
+  from {
+    transform: translateX(0%);
+    // opacity: 1;
+  }
+  to {
+    transform: translateX(-150%);
+    // opacity: 0;
+  }
+}
+@keyframes hideRight {
+  from {
+    transform: translateX(0%);
+    // opacity: 1;
+  }
+  to {
+    transform: translateX(150%);
+    // opacity: 0;
+  }
+}
+@keyframes changeLogo {
+  from {
+    background: url("../images/logo.svg") center no-repeat;
+    background-size: contain;
+  }
+  to {
+    background: url("../images/header-logo.svg") center no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+    left: 50px;
+    top: 50px;
+  }
+}

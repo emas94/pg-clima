@@ -1,0 +1,68 @@
+header {
+  height: 80vh;
+  width: 100%;
+  background: url("../images/hero.svg") center no-repeat;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 45.68%),
+      linear-gradient(
+        360deg,
+        rgba(255, 255, 255, 0.63) 0%,
+        rgba(255, 255, 255, 0) 37.24%
+      );
+    transform: rotate(180deg);
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
+    height: 100px;
+    align-items: center;
+    padding: 0 50px;
+    padding-left: 100px;
+    .title {
+      color: $primary;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+      animation: show 0.7s 1.2s both;
+      span {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+    nav {
+      animation: show 0.7s 1.2s both;
+      ul {
+        display: flex;
+        li {
+          margin: 0 10px;
+          color: $primary-text;
+        }
+      }
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes showFromRight {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
