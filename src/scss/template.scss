@@ -37,6 +37,13 @@
     z-index: 1;
   }
 }
+.container {
+  background: linear-gradient(
+    352deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
 @keyframes hideLeft {
   from {
     transform: translateX(0%);

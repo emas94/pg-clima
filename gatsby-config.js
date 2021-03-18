@@ -11,6 +11,5 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-  ],
-  pathPrefix: "/github.com/emas94/pg-clima",
+  ]
 }

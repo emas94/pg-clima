@@ -1,10 +1,15 @@
 import * as React from "react"
 import "../scss/app.scss"
 import Template from "../components/Template"
+import Homepage from "../components/Homepage"
 
 // markup
 const IndexPage = () => {
-  return <Template>{/* <h1>eluwina</h1> */}</Template>
+  return (
+    <Template>
+      <Homepage />
+    </Template>
+  )
 }
 
 export default IndexPage

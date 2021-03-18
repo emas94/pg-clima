@@ -1,4 +1,202 @@
-// @import "./variables.scss";
-body {
-  // background: $primary;
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+  min-height: 100vh;
+  // background: radial-gradient(
+  //   circle at center,
+  //   rgb(189, 189, 189) 0%,
+  //   #fff 100%
+  // );
+  // background: rgb(189, 189, 189);
+  h2 {
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 700;
+    text-align: center;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .home-content {
+    font-size: 24px;
+    line-height: 48px;
+    margin-top: 30px;
+    // color: rgb(43, 43, 43);
+    color: $primary-text;
+    text-align: center;
+    span {
+      font-weight: bold;
+      font-size: 28px;
+    }
+    ul {
+      margin: 0;
+
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      li {
+        // margin-left: 40px;
+        list-style: circle;
+        margin-left: 40px;
+        &:nth-of-type(1){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .home-carousel {
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px;
+    max-width: 1280px;
+    h2 {
+      margin-bottom: 50px;
+    }
+    .react-multi-carousel-track {
+      padding-bottom: 50px;
+      align-items: center;
+    }
+    .react-multi-carousel-dot-list{
+      // bottom: -50px;
+    }
+    .react-multi-carousel-dot{
+
+      button{
+        height: 20px;
+        width: 20px;
+      }
+&--active{
+  button{
+    background: $primary;
+  }
+}
+    } 
+    .carousel-item {
+      height: 400px;
+      // border: 1px solid $primary;
+      border-radius: 20px;
+      box-shadow: 0 0 4px 4px $primary;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      .offer-img {
+        transition: 0.3s linear;
+        height: 70%;
+        width: 100%;
+        background: url("../images/hero.svg") center no-repeat;
+        background-size: cover;
+        &.lg{
+          background: url("../images/lg-offer.jpg") center no-repeat;
+          background-size: cover;
+        }
+        &.mb{
+          background: url("../images/mb-offer.jpg") center no-repeat;
+          background-size: cover;
+        }
+        &.haier{
+          background: url("../images/haier-offer.png") center no-repeat;
+          background-size: cover;
+        }
+        &.gree{
+          background: url("../images/gree-offer.png") center no-repeat;
+          background-size: cover;
+        }
+        &.aux{
+          background: url("../images/aux-offer.png") center no-repeat;
+          background-size: cover;
+        }
+        &.serva{
+          background: url("../images/serva-offer.png") center no-repeat;
+          background-size: cover;
+        }
+        &.kaisai{
+          background: url("../images/kaisai-offer.png") center no-repeat;
+          background-size: cover;
+        }
+      }
+      &:hover {
+        .view-more {
+          transform: translateY(0);
+        }
+        .offer-img {
+          transform: translateY(-100%);
+        }
+        .bottom {
+          transform: translateY(100%);
+        }
+      }
+      .view-more {
+        position: absolute;
+        transition: 0.3s linear;
+        height: 100%;
+        width: 100%;
+        background: $primary-alfa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(100%);
+        cursor: pointer;
+        button {
+          background: transparent;
+          border: 1px solid $primary-text;
+          font-size: 24px;
+          padding: 20px 40px;
+          color: $primary-text;
+        }
+      }
+      .bottom {
+        // background: rgba(255, 255, 255, 0.8);
+        transition: 0.3s linear;
+        background: $primary-alfa;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        color: azure;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+      }
+    }
+  }
+  .values {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    .item-container {
+      flex-basis: 40%;
+      display: flex;
+      // justify-content: center;
+      margin: 20px;
+      margin-bottom: 70px;
+      .item {
+        background: url("../images/work.svg") center no-repeat;
+        min-width: 150px;
+        height: 150px;
+        margin-right: 40px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+          font-size: 48px;
+          font-weight: bold;
+          color: $primary;
+        }
+        p {
+          font-size: 32px;
+        }
+      }
+    }
+  }
 }

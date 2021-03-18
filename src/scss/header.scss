@@ -3,6 +3,7 @@ header {
   width: 100%;
   background: url("../images/hero.svg") center no-repeat;
   background-size: cover;
+  position: relative;
   &::before {
     content: "";
     position: absolute;
@@ -17,6 +18,7 @@ header {
       );
     transform: rotate(180deg);
   }
+
   .top {
     display: flex;
     justify-content: space-between;
