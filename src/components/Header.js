@@ -4,9 +4,7 @@ const Header = () => {
   return (
     <header>
       <div className="top">
-        <p className="title">
-          PG Clima <span>klimatyzacja i wentylacja</span>
-        </p>
+        <p className="title">PG Clima</p>
         <Navigation></Navigation>
       </div>
       <div className="hero"></div>

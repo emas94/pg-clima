@@ -12,7 +12,7 @@ const responsive = {
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1324, min: 464 },
     items: 2,
   },
   mobile: {
@@ -27,12 +27,10 @@ const Homepage = () => {
       <div className="home-content">
         To firma świadcząca kompleksowe usługi z zakresu montażu, serwisu oraz
         naprawy urządzeń klimatyzacyjnych I wentylacyjnych.
-        <p>Nasze usługi kierujemy do:</p>
-        <ul>
-          <li>Osób prywatnych </li>
-          <li> Firm </li>
-          <li> Instytucji </li>
-        </ul>
+        <p>
+          Nasze usługi kierujemy do:{" "}
+          <span>osób prywatnych, firm, instytucji.</span>
+        </p>
         Oferujemy profesjonalny montaż. Posiadamy uprawnienia <span>F-Gaz</span>{" "}
         oraz<span> SEP</span>. Działamy na terenie całego kraju.
       </div>

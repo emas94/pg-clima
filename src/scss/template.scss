@@ -38,11 +38,13 @@
   }
 }
 .container {
-  background: linear-gradient(
-    352deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  // background: linear-gradient(
+  //   352deg,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(0, 0, 0, 1) 100%
+  // );
+  // background: url("../images/diamond-background.svg") center no-repeat;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #c7c7c7 100%);
 }
 @keyframes hideLeft {
   from {
