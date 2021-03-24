@@ -1,0 +1,135 @@
+.offer {
+  .container {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    max-width: 1180px !important;
+    .default-header {
+      margin-bottom: 0;
+    }
+    .text-content {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 500;
+      margin: 50px 0;
+    }
+    .offers-carousel {
+      // max-width: 1300px;
+      width: 100%;
+      z-index: 3;
+      .react-multi-carousel-item {
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+      }
+      .offer-item {
+        background: rgba($color: #fff, $alpha: 0.5);
+        height: 500px;
+        width: 300px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        padding: 40px 30px;
+        margin-top: 50px;
+        border-radius: 20px;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          height: 80%;
+          width: 80%;
+          border: 2px solid $primary;
+          z-index: 0;
+        }
+        .name {
+          text-align: center;
+          color: $primary;
+          font-size: 32px;
+          font-weight: 700;
+          margin: 20px 0;
+        }
+        .data {
+          text-align: center;
+          color: $secondary-text;
+          p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+        .price {
+          text-align: center;
+          color: $secondary-text;
+          font-size: 28px;
+          font-weight: 700;
+          margin: 20px 0;
+          z-index: 1;
+          button {
+            font-size: 20px;
+            position: relative;
+            color: $primary !important;
+            outline: none;
+            padding: 8px 20px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            a {
+              // position: absolute;
+              position: relative;
+              z-index: 99999999999999999;
+              height: 100%;
+              width: 100%;
+              color: $primary;
+              left: 0;
+              top: 0;
+            }
+            &:after,
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 20%;
+              height: 20%;
+              border: 2px solid;
+              transition: all 0.6s ease;
+              border-radius: 2px;
+            }
+            &::after {
+              bottom: 0;
+              right: 0;
+              border-top-color: transparent;
+              border-left-color: transparent;
+              border-bottom-color: $primary;
+              border-right-color: $primary;
+            }
+            &:before {
+              top: 0;
+              left: 0;
+              border-bottom-color: transparent;
+              border-right-color: transparent;
+              border-top-color: $primary;
+              border-left-color: $primary;
+            }
+            &:hover:after,
+            &:hover:before {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    table {
+      // margin-top: 50px;
+      th {
+        font-weight: bold;
+      }
+    }
+  }
+}

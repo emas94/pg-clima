@@ -20,6 +20,7 @@ const responsive = {
     items: 1,
   },
 }
+console.log(process.env.GATSBY_API_URL)
 const Homepage = () => {
   return (
     <div className="home-container">
@@ -98,26 +99,26 @@ const Homepage = () => {
           </div>
         </Carousel>
       </div>
-      {/* <h2 className="default-header">Poznaj nasze wartości</h2>
+      <h2 className="default-header">Poznaj nasze wartości</h2>
       <div className="values">
         <div className="item-container">
-          <div className="item"></div>
+          <div className="item clients"></div>
           <div>
             <p className="title">100%</p>
             <p>Zadowolonych klientów</p>
           </div>
         </div>
         <div className="item-container">
-          <div className="item"></div>
+          <div className="item brand"></div>
           <div>
-            <p className="title">32</p>
+            <p className="title ">30</p>
             <p>
               Autoryzowanych marek,<br></br> z którymi współpracujemy
             </p>
           </div>
         </div>
         <div className="item-container">
-          <div className="item"></div>
+          <div className="item knowledge"></div>
           <div>
             <p className="title">1:1</p>
             <p>
@@ -126,13 +127,13 @@ const Homepage = () => {
           </div>
         </div>
         <div className="item-container">
-          <div className="item"></div>
+          <div className="item hard-work"></div>
           <div>
             <p className="title">100%</p>
             <p>Cięzka praca</p>
           </div>
-        </div> */}
-      {/* </div> */}
+        </div>
+      </div>
     </div>
   )
 }

@@ -13,16 +13,6 @@ const Footer = () => {
           <p> NIP: 6010091237</p>
         </div>
       </div>
-      <div className="contact-form">
-        <h2>Zostaw nam wiadomość</h2>
-        <form action="">
-          <input type="text" placeholder="Imie nazwisko" />
-          <input type="email" placeholder="email" />
-          <input type="phone" placeholder="Numer telefonu" />
-          <textarea type="text" placeholder="Wiadomość" />
-          <input type="submit" placeholder="Wyślij" />
-        </form>
-      </div>
     </footer>
   )
 }
