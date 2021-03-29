@@ -4,7 +4,8 @@
   width: 100%;
   transform: translate(0, 0);
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
+  animation: changeSize 1s 0.5s both;
   &::before {
     content: "";
     background: $primary;
@@ -65,6 +66,16 @@
   to {
     transform: translateX(150%);
     // opacity: 0;
+  }
+}
+@keyframes changeSize {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+  to {
+    height: 100px;
+    width: 100px;
   }
 }
 @keyframes changeLogo {

@@ -52,8 +52,29 @@ header {
           color: $primary-text;
           font-size: 24px;
           line-height: 29px;
+          .dropdown-menu {
+            background: rgba($color: #fff, $alpha: 0.8);
+            a {
+              color: $secondary-text;
+            }
+          }
+          &.dropdown {
+            &.show .dropdown-toggle::after {
+              transform: rotate(-90deg);
+            }
+            .dropdown-toggle {
+              margin-right: calc(0.5rem + 10px);
+
+              &::after {
+                position: absolute;
+                top: 22px;
+                transition: 0.3s linear;
+              }
+            }
+          }
           a {
             text-decoration: none;
+            color: $primary-text;
           }
         }
       }

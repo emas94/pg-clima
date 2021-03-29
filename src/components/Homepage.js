@@ -1,6 +1,8 @@
-import * as React from "react"
+import React, { useRef, useEffect } from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import { useRootContext } from "../store/rootContext"
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -20,11 +22,17 @@ const responsive = {
     items: 1,
   },
 }
-console.log(process.env.GATSBY_API_URL)
 const Homepage = () => {
+  const aboutUsRef = useRef(null)
+  const { saveRef } = useRootContext()
+  useEffect(() => {
+    saveRef(aboutUsRef)
+  }, [])
   return (
     <div className="home-container">
-      <h1 className="default-header">PG Clima - Klimatyzacja i wentylacja</h1>
+      <h1 className="default-header" ref={aboutUsRef}>
+        PG Clima - Klimatyzacja i wentylacja
+      </h1>
       <div className="home-content">
         To firma świadcząca kompleksowe usługi z zakresu montażu, serwisu oraz
         naprawy urządzeń klimatyzacyjnych I wentylacyjnych.

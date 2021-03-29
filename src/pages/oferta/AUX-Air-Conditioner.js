@@ -31,7 +31,7 @@ const AuxPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("document.type", "mitsubishi")
+        Prismic.Predicates.at("document.type", "aux")
       )
       if (response) {
         setDocData(response.results)
@@ -44,7 +44,7 @@ const AuxPage = () => {
     <Template>
       <div className="offer">
         <div className="container">
-          <h2 className="default-header">Mitsubishi - sprawdź naszą ofertę</h2>
+          <h2 className="default-header">AUX - sprawdź naszą ofertę</h2>
 
           <p className="text-content">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque

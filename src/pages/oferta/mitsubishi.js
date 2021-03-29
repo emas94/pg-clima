@@ -4,6 +4,8 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import Prismic from "@prismicio/client"
 import OfferItem from "../../components/OfferItem"
+import RootProvider from "../../store/rootContext"
+import { RootContext } from "../../store/rootContext"
 const Client = Prismic.client(process.env.PRISMIC_API_URL)
 const responsive = {
   superLargeDesktop: {
@@ -40,41 +42,47 @@ const MitsubishiPage = () => {
     fetchData()
   }, [])
   return (
-    <Template>
-      <div className="offer">
-        <div className="container">
-          <h2 className="default-header">Mitsubishi - sprawdź naszą ofertę</h2>
+    <RootProvider>
+      <Template>
+        <div className="offer">
+          <div className="container">
+            <h2 className="default-header">
+              Mitsubishi - sprawdź naszą ofertę
+            </h2>
 
-          <p className="text-content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
-            ducimus minima sequi at aperiam sapiente, dolorum velit, sunt odit
-            corporis obcaecati assumenda, id quod. ducimus minima sequi at
-            aperiam sapiente, dolorum velit, sunt odit corporis obcaecati
-            assumenda, id quod.
-          </p>
-
-          <div className="offers-carousel">
-            <Carousel
-              responsive={responsive}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              infinite={true}
-              keyBoardControl={true}
-              showDots={true}
-              dotListClass="custom-dot"
-            >
-              {doc ? (
-                doc.map((r) => {
-                  return <OfferItem key={r.id} offer={r}></OfferItem>
-                })
-              ) : (
-                <div></div>
-              )}
-            </Carousel>
+            <p className="text-content">
+              Od dziś klimatyzatory Deluxe i Mirror wnoszą świeżość natury do
+              Twojego domu. Całkowicie nowy system AirCare Complete wykorzystuje
+              proces filtracji z UVnanoTM i jonizatorem, który usuwa drobny
+              kurz, a nawet bakterie, zapewniając, że powietrze, którym
+              oddychasz, jest zawsze świeże. Oddychaj naturą w swoim domu.
+            </p>
+            <a href="" className="download">
+              Pobierz całą ofertę
+            </a>
+            <div className="offers-carousel">
+              <Carousel
+                responsive={responsive}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                infinite={true}
+                keyBoardControl={true}
+                showDots={true}
+                dotListClass="custom-dot"
+              >
+                {doc ? (
+                  doc.map((r) => {
+                    return <OfferItem key={r.id} offer={r}></OfferItem>
+                  })
+                ) : (
+                  <div></div>
+                )}
+              </Carousel>
+            </div>
           </div>
         </div>
-      </div>
-    </Template>
+      </Template>
+    </RootProvider>
   )
 }
 

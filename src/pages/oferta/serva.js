@@ -32,7 +32,7 @@ const ServaPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("document.type", "mitsubishi")
+        Prismic.Predicates.at("document.type", "serva")
       )
       if (response) {
         setDocData(response.results)
@@ -44,7 +44,7 @@ const ServaPage = () => {
     <Template>
       <div className="offer">
         <div className="container">
-          <h2 className="default-header">Mitsubishi - sprawdź naszą ofertę</h2>
+          <h2 className="default-header">Serva - sprawdź naszą ofertę</h2>
 
           <p className="text-content">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
