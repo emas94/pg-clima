@@ -12,6 +12,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
 
   h2 {
     font-size: 32px;
@@ -31,6 +34,9 @@
     justify-content: space-between;
     padding-bottom: 50px;
     height: 100%;
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
     .logo {
       height: 230px;
       width: 155px;
@@ -59,6 +65,10 @@
     align-items: center;
     // margin-top: 50px;
     flex-basis: 60%;
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 50px;
+    }
     .modal & {
       flex-basis: 100%;
     }

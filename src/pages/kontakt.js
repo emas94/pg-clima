@@ -13,10 +13,10 @@ const Kontakt = () => {
               <h2>PG Clima</h2>
             </div>
             <div className="content">
+              <p>Patryk Gil</p>
               <p>E-mail: pgclima1993@gmail.com</p>
               <p>Tel: 796 442 852</p>
               <p>NIP: 6010091237</p>
-              <p>Tel: 121312313</p>
             </div>
           </div>
           <form action="">

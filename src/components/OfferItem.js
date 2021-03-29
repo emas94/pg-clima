@@ -44,7 +44,6 @@ const OfferItem = ({ offer }) => {
           </p>
         </div>
         <div className="price">
-          <p>{offer.data.price[0].text}</p>
           <button onClick={toggle}>
             {/* <a href="../kontakt">Zamów</a> */}
             Skontaktuj się

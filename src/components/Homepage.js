@@ -35,13 +35,20 @@ const Homepage = () => {
       </h1>
       <div className="home-content">
         To firma świadcząca kompleksowe usługi z zakresu montażu, serwisu oraz
-        naprawy urządzeń klimatyzacyjnych I wentylacyjnych.
+        naprawy urządzeń klimatyzacyjnych i wentylacyjnych. Oferujemy montaż
+        klimatyzacji typu split, multisplit, VRF, VRV oraz serwis klimatyzacji.
         <p>
-          Nasze usługi kierujemy do:{" "}
-          <span>osób prywatnych, firm, instytucji.</span>
+          Nasze usługi kierujemy do:
+          <span> osób prywatnych, firm, instytucji. </span>
         </p>
-        Oferujemy profesjonalny montaż. Posiadamy uprawnienia <span>F-Gaz</span>{" "}
-        oraz<span> SEP</span>. Działamy na terenie całego kraju.
+        Oferujemy profesjonalny montaż. Posiadamy uprawnienia{" "}
+        <span>F-Gaz </span>
+        oraz<span> SEP</span>. Działamy na terenie Warszawy i okolic.
+        <p>
+          Zajmujemy się kompleksowym wykonaniem usługi, od
+          <span> bezpłatnej</span> wyceny, poprzez dobór i zakup odpowiedniego
+          urządzenia, do montażu i uruchomienia.
+        </p>
       </div>
       <div className="home-carousel">
         <h2 className="default-header">
@@ -58,49 +65,63 @@ const Homepage = () => {
         >
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img mb"></div>
             <div className="bottom">Mitsubishi</div>
           </div>
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img lg"></div>
             <div className="bottom"> LG</div>
           </div>
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img haier"></div>
             <div className="bottom">Haier</div>
           </div>
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img gree "></div>
             <div className="bottom">Gree</div>
           </div>
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img aux"></div>
             <div className="bottom">AUX </div>
           </div>
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img serva"></div>
             <div className="bottom">ServA </div>
           </div>
           <div className="carousel-item">
             <div className="view-more">
-              <button>Zobacz ofertę</button>
+              <button>
+                <a href="./oferta/mitsubishi">Zobacz ofertę</a>{" "}
+              </button>
             </div>
             <div className="offer-img kaisai"></div>
             <div className="bottom">Kaisai </div>
