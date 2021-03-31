@@ -36,7 +36,7 @@ const Homepage = () => {
       <div className="home-content">
         To firma świadcząca kompleksowe usługi z zakresu montażu, serwisu oraz
         naprawy urządzeń klimatyzacyjnych i wentylacyjnych. Oferujemy montaż
-        klimatyzacji typu split, multisplit, VRF, VRV oraz serwis klimatyzacji.
+        klimatyzacji typu split, multisplit, VRF, VRV.
         <p>
           Nasze usługi kierujemy do:
           <span> osób prywatnych, firm, instytucji. </span>

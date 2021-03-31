@@ -34,6 +34,9 @@ header {
       font-size: 28px;
       line-height: 34px;
       margin: 0;
+      a {
+        color: $primary;
+      }
       @media (min-width: $tablet) {
         animation: show 0.7s 1.2s both;
       }
@@ -43,7 +46,7 @@ header {
       }
     }
     nav {
-      position: relative;
+      position: unset;
       z-index: 9999999999999;
       @media (min-width: $tablet) {
         animation: show 0.7s 1.2s both;
@@ -53,8 +56,8 @@ header {
           position: absolute;
           z-index: 1000;
           background: yellow;
-          right: 20px;
-          top: 20px;
+          right: 30px;
+          top: 30px;
         }
       }
       ul {
@@ -62,7 +65,8 @@ header {
           position: fixed;
           height: 100%;
           width: 100%;
-          background: red;
+          transition: 0.3s linear;
+          background: rgba($color: #000000, $alpha: 0.8);
           left: 0;
           top: 0;
           max-height: 100vh;
