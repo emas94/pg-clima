@@ -29,6 +29,7 @@ const responsive = {
 // markup
 const MitsubishiPage = () => {
   const [doc, setDocData] = useState(null)
+  const [link, setLinkData] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,8 +40,18 @@ const MitsubishiPage = () => {
         setDocData(response.results)
       }
     }
+    const fetchLink = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at("document.type", "mitsubishi-pdf")
+      )
+      if (response) {
+        setLinkData(response.results)
+      }
+    }
+    fetchLink()
     fetchData()
   }, [])
+  console.log(link ? link[0].data : null)
   return (
     <RootProvider>
       <Template>
@@ -51,15 +62,16 @@ const MitsubishiPage = () => {
             </h2>
 
             <p className="text-content">
-              Od dziś klimatyzatory Deluxe i Mirror wnoszą świeżość natury do
-              Twojego domu. Całkowicie nowy system AirCare Complete wykorzystuje
-              proces filtracji z UVnanoTM i jonizatorem, który usuwa drobny
-              kurz, a nawet bakterie, zapewniając, że powietrze, którym
-              oddychasz, jest zawsze świeże. Oddychaj naturą w swoim domu.
+              Firma PG Clima oferuje szeroki zakres świadczeń jeżeli chodzi o
+              urządzenia tej marki. Oferujemy sprzedaż, montaż oraz serwis
+              urządzeń marki Mitsubishi na terenie Warszawy oraz okolic.
             </p>
-            <a href="" className="download">
+            <a href={link ? link[0].data.pdf.url : null} className="download">
               Pobierz całą ofertę
             </a>
+            <h2 className="default-header mt-50">
+              Sprawdź najpopularniejsze modele
+            </h2>
             <div className="offers-carousel">
               <Carousel
                 responsive={responsive}

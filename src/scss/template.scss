@@ -1,41 +1,49 @@
 .start-animation {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transform: translate(0, 0);
-  overflow: hidden;
-  z-index: 1;
-  animation: changeSize 1s 0.5s both;
-  &::before {
-    content: "";
-    background: $primary;
+  @media (min-width: $tablet) {
     position: absolute;
+    transform: translate(0, 0);
+    overflow: hidden;
     z-index: 1;
     height: 100%;
-    width: 50%;
-    animation: hideLeft 1s 0.2s both;
+    width: 100%;
+    animation: changeSize 1s 0.5s both;
+  }
+  &::before {
+    @media (min-width: $tablet) {
+      content: "";
+      background: $primary;
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      width: 50%;
+      animation: hideLeft 1s 0.2s both;
+    }
   }
   &::after {
-    content: "";
-    background: $primary;
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    right: 0;
-    top: 0;
-    animation: hideRight 1s 0.2s both;
+    @media (min-width: $tablet) {
+      content: "";
+      background: $primary;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      right: 0;
+      top: 0;
+      animation: hideRight 1s 0.2s both;
+    }
   }
   .start-image {
-    background: url("../images/logo.svg") center no-repeat;
-    animation: changeLogo 1s 0.5s both;
-    background-size: contain;
-    height: 500px;
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    @media (min-width: $tablet) {
+      background: url("../images/logo.svg") center no-repeat;
+      animation: changeLogo 1s 0.5s both;
+      background-size: contain;
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
   }
 }
 .container {

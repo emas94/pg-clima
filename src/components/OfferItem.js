@@ -4,6 +4,7 @@ const OfferItem = ({ offer }) => {
   const [modal, setModal] = useState(false)
 
   const toggle = () => setModal(!modal)
+  console.log(offer)
   return (
     <>
       <Modal isOpen={modal} toggle={toggle} className="" centered>
@@ -35,13 +36,13 @@ const OfferItem = ({ offer }) => {
       <div className="offer-item">
         <div className="name">{offer.data.model[0].text}</div>
         <div className="data">
-          <p>Wysokość: {offer.data.height[0].text}</p>
-          <p>Szerokość:{offer.data.width[0].text}</p>
-          <p>
-            {offer.data.description[0]
-              ? "Opis: " + offer.data.description[0].text
-              : null}
-          </p>
+          <p>{offer.data.height[0] ? offer.data.height[0].text : "--"}</p>
+          <p>{offer.data.width[0] ? offer.data.width[0].text : "--"}</p>
+          {offer.data.data
+            ? offer.data.data.map((d) => {
+                return <p>{d.value[0].text}</p>
+              })
+            : ""}
         </div>
         <div className="price">
           <button onClick={toggle}>

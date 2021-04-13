@@ -45,15 +45,17 @@ const KaisaiPage = () => {
       <div className="offer">
         <div className="container">
           <h2 className="default-header">Kaisai - sprawdź naszą ofertę</h2>
-
           <p className="text-content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
-            ducimus minima sequi at aperiam sapiente, dolorum velit, sunt odit
-            corporis obcaecati assumenda, id quod. ducimus minima sequi at
-            aperiam sapiente, dolorum velit, sunt odit corporis obcaecati
-            assumenda, id quod.
+            Firma PG Clima oferuje szeroki zakres świadczeń jeżeli chodzi o
+            urządzenia tej marki. Oferujemy sprzedaż, montaż oraz serwis
+            urządzeń marki Kaisai na terenie Warszawy oraz okolic.
           </p>
-
+          <a href="" className="download">
+            Pobierz całą ofertę
+          </a>
+          <h2 className="default-header mt-50">
+            Sprawdź najpopularniejsze modele
+          </h2>
           <div className="offers-carousel">
             <Carousel
               responsive={responsive}

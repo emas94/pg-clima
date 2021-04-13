@@ -47,13 +47,16 @@ const LgPage = () => {
           <h2 className="default-header">LG - sprawdź naszą ofertę</h2>
 
           <p className="text-content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
-            ducimus minima sequi at aperiam sapiente, dolorum velit, sunt odit
-            corporis obcaecati assumenda, id quod. ducimus minima sequi at
-            aperiam sapiente, dolorum velit, sunt odit corporis obcaecati
-            assumenda, id quod.
+            Firma PG Clima oferuje szeroki zakres świadczeń jeżeli chodzi o
+            urządzenia tej marki. Oferujemy sprzedaż, montaż oraz serwis
+            urządzeń marki LG na terenie Warszawy oraz okolic.
           </p>
-
+          <a href="../../pdf/LG-cennik-2021.pdf" download className="download">
+            Pobierz całą ofertę
+          </a>
+          <h2 className="default-header mt-50">
+            Sprawdź najpopularniejsze modele
+          </h2>
           <div className="offers-carousel">
             <Carousel
               responsive={responsive}
